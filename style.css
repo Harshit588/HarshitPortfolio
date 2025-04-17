@@ -1,0 +1,40 @@
+body {
+  font-family: "Segoe UI", sans-serif;
+}
+a {
+  transition: all 0.3s ease;
+}
+img {
+  transition: transform 0.3s ease;
+}
+img:hover {
+  transform: scale(1.05);
+}
+.skill-item {
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+.skill-item:hover {
+  transform: scale(1.1);
+  color: #fbbf24; /* Hover color (yellow) */
+}
+.bg-gray-800:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+.btn-link {
+  color: #facc15;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+.btn-link:hover {
+  color: #ffffff;
+}
+.btn-link:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(250, 204, 21, 0.5);
+}
+.btn-link:active {
+  color: #fbbf24;
+  transform: scale(0.95);
+}
