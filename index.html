@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -15,63 +15,90 @@
 
 </head>
 
-<body class="bg-gray-900 text-white font-sans scroll-smooth">
+<body class="bg-gray-900 text-white font-sans scroll-smooth overflow-x-hidden">
 
   <!-- Navigation Bar (Desktop Only) -->
-  <nav class="flex justify-between items-center p-5 bg-gray-800 shadow-lg fixed w-full z-50 top-0 left-0">
-    <!-- Logo Section -->
+  <nav class="flex justify-between items-center p-4 bg-gray-800 fixed w-full z-50 top-0 left-0 shadow-lg">
+    <!-- Logo and Brand Name -->
     <div class="flex items-center space-x-2">
-      <!-- Replace this with your logo image -->
-      <img src="./assets/logoHR.jpg" alt="Logo" class="w-9 h-9 object-contain">
-      <h1 class="text-xl font-bold text-white">Harshit Arya</h1>
+        <img src="./assets/logoHR.jpg" alt="Logo" class="w-10 h-10 rounded-full">
+        <h1 class="text-xl font-bold text-white">Harshit Arya</h1>
     </div>
 
-    <!-- Desktop Menu -->
-    <ul class="flex space-x-6">
-      <li><a href="#home" class="text-white hover:text-yellow-300 transition duration-200">Home</a></li>
-      <li><a href="#about" class="text-white hover:text-yellow-300 transition duration-200">About</a></li>
-      <li><a href="#skills" class="text-white hover:text-yellow-300 transition duration-200">Skills</a></li>
-      <li><a href="#projects" class="text-white hover:text-yellow-300 transition duration-200">Projects</a></li>
-      <li><a href="#experience" class="text-white hover:text-yellow-300 transition duration-200">Experience</a></li>
-      <li><a href="#certifications" class="text-white hover:text-yellow-300 transition duration-200">Certifications</a></li>
-      <li><a href="#contact" class="text-white hover:text-yellow-300 transition duration-200">Contact</a></li>
+    <!-- Mobile Menu Button -->
+    <div class="md:hidden">
+        <button id="menu-btn" class="text-white focus:outline-none">
+            <i class="material-icons">menu</i>
+        </button>
+    </div>
+
+    <!-- Menu Links for Desktop -->
+    <ul id="menu" class="hidden md:flex space-x-6 text-white">
+        <li><a href="#home" class="hover:text-yellow-300 transition duration-300">Home</a></li>
+        <li><a href="#about" class="hover:text-yellow-300 transition duration-300">About</a></li>
+        <li><a href="#skills" class="hover:text-yellow-300 transition duration-300">Skills</a></li>
+        <li><a href="#projects" class="hover:text-yellow-300 transition duration-300">Projects</a></li>
+        <li><a href="#experience" class="hover:text-yellow-300 transition duration-300">Experience</a></li>
+        <li><a href="#certifications" class="hover:text-yellow-300 transition duration-300">Certifications</a></li>
+        <li><a href="#contact" class="hover:text-yellow-300 transition duration-300">Contact</a></li>
     </ul>
-  </nav>
+
+    <!-- Mobile Menu (Hidden by default) -->
+    <ul id="mobile-menu" class="hidden absolute top-16 left-0 w-full bg-gray-800 md:hidden flex flex-col items-center space-y-4 py-4">
+        <li><a href="#home" class="text-white hover:text-yellow-300">Home</a></li>
+        <li><a href="#about" class="text-white hover:text-yellow-300">About</a></li>
+        <li><a href="#skills" class="text-white hover:text-yellow-300">Skills</a></li>
+        <li><a href="#projects" class="text-white hover:text-yellow-300">Projects</a></li>
+        <li><a href="#experience" class="text-white hover:text-yellow-300">Experience</a></li>
+        <li><a href="#certifications" class="text-white hover:text-yellow-300">Certifications</a></li>
+        <li><a href="#contact" class="text-white hover:text-yellow-300">Contact</a></li>
+    </ul>
+</nav>
 
   <!-- Home -->
-  <section id="home" class="min-h-screen flex items-center justify-center px-6 bg-black relative overflow-hidden overflow-x-hidden" data-aos="fade-up">
-    <div class="container mx-auto flex flex-col md:flex-row items-center justify-between max-w-7xl gap-x-8">
+  <section id="home" class="relative min-h-screen bg-black flex items-center justify-center overflow-hidden pt-20 px-6">
 
-      <!-- Left Content -->
-      <div class="w-full md:w-[45%] text-center md:text-left space-y-6">
-        <!-- Profile Photo -->
-        <img src="assets/Harshit.jpg" alt="Harshit Arya" class="w-48 h-48 md:w-56 md:h-56 rounded-full mx-auto md:mx-0 border-4 border-yellow-400" />
+  <!-- Mobile Background Image (Visible only in mobile) -->
+  <div class="absolute inset-0 md:hidden">
+    <img src="assets/BgProfile1.png" alt="Background" class="w-full h-full object-cover opacity-20 scale-110">
+  </div>
 
-        <h1 class="text-5xl md:text-6xl font-extrabold text-white">Hi, I'm Harshit Soni</h1>
-        <p class="text-xl text-yellow-400">
-          I'm a <span class="typed-text"></span>
-        </p>
-        <p class="text-2xl text-gray-400 font-semibold">Currently working at Indew Technology.</p>
+  <!-- Container -->
+  <div class="container mx-auto max-w-7xl flex flex-col md:flex-row items-center justify-between relative z-10">
 
+    <!-- Left Content -->
+    <div class="w-full md:w-1/2 text-center md:text-left space-y-6">
+      <!-- Profile Small Image (for desktop only) -->
+      <img src="assets/Harshit.jpg" alt="Harshit Arya" class="w-32 h-32 md:w-44 md:h-44 rounded-full mx-auto md:mx-0 border-4 border-yellow-400 shadow-lg">
 
-        <div class="flex justify-center md:justify-start space-x-8 animate-pulse">
-          <a href="https://github.com/harshitarya" target="_blank" class="text-white hover:text-yellow-400 text-2xl">GitHub</a>
+      <h1 class="text-4xl md:text-6xl font-bold text-white leading-tight">Hi, I'm Harshit Soni</h1>
 
-          <a href="https://linkedin.com/in/harshit-arya-589638253/" target="_blank" class="text-white hover:text-yellow-400 text-2xl">LinkedIn</a>
-        </div>
+      <p class="text-xl md:text-2xl text-yellow-400 font-semibold">
+        I'm a <span class="typed-text"></span>
+      </p>
 
-        <a href="assets/Harshit_Arya_Resume.pdf" download class="inline-block mt-4 px-8 py-3 border-2 border-yellow-400 rounded hover:bg-yellow-400 hover:text-black transition">
-          Download Resume
-        </a>
+      <p class="text-lg md:text-xl text-gray-400 font-medium">Currently working at Indew Technology.</p>
+
+      <div class="flex justify-center md:justify-start space-x-6">
+        <a href="https://github.com/harshitarya" target="_blank" class="text-white hover:text-yellow-400 transition">GitHub</a>
+        <a href="https://linkedin.com/in/harshit-arya-589638253/" target="_blank" class="text-white hover:text-yellow-400 transition">LinkedIn</a>
       </div>
 
-      <!-- Right Image -->
-      <div class="w-full md:w-[45%] mt-10 md:mt-0">
-        <div class="h-full w-full bg-no-repeat bg-cover bg-center filter grayscale hover:grayscale-0 transition-all duration-500" style="background-image: url('assets/BgProfile1.png'); background-size: 90%; height: 1000px;">
-        </div>
-      </div>
+      <a href="assets/Harshit_Arya_Resume.pdf" download class="inline-block mt-6 px-8 py-3 border-2 border-yellow-400 rounded hover:bg-yellow-400 hover:text-black transition font-semibold">
+        Download Resume
+      </a>
     </div>
-  </section>
+
+    <!-- Right Side Big Image (Only for Desktop) -->
+    <div class="hidden md:flex justify-center items-center w-1/2">
+      <img src="assets/BgProfile1.png" alt="Profile" class="w-[400px] h-auto object-cover rounded-lg shadow-2xl hover:scale-105 transition-transform duration-500">
+    </div>
+
+  </div>
+</section>
+
+  
+  
 
   <!-- About -->
   <section id="about" class="scroll-mt-20 py-20 px-6 bg-gray-900 text-white" data-aos="fade-up">
@@ -433,7 +460,7 @@
       </div>
 
       <input type="hidden" name="_captcha" value="false">
-      <input type="hidden" name="_next" value="https://harshit588.github.io/HarshitPortfolio/">
+      <input type="hidden" name="_next" value="">
 
       <!-- Submit Button -->
       <div>
