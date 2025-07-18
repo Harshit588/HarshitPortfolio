@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const typedElement = document.querySelector('.typed-text');
   if (typedElement) {
     new Typed('.typed-text', {
-      strings: ['Java Backend Developer', 'MERN Stack Enthusiast'],
+      strings: ['Java Backend Developer', 'MERN Stack Developer'],
       typeSpeed: 50,
       backSpeed: 30,
       backDelay: 1500,
@@ -46,4 +46,13 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
+});
+
+AOS.init();
+
+
+const menuBtn = document.getElementById("menu-btn");
+const mobileMenu = document.getElementById("mobile-menu");
+menuBtn.addEventListener("click", () => {
+  mobileMenu.classList.toggle("hidden");
 });
