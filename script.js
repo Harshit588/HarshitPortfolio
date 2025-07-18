@@ -4,52 +4,51 @@ AOS.init({
 });
 
 // Smooth scroll for navbar links
-document.querySelectorAll('.nav-link').forEach(link => {
-  link.addEventListener('click', e => {
-    const target = document.querySelector(link.getAttribute('href'));
+document.querySelectorAll(".nav-link").forEach((link) => {
+  link.addEventListener("click", (e) => {
+    const target = document.querySelector(link.getAttribute("href"));
     if (target) {
       e.preventDefault();
       window.scrollTo({
         top: target.offsetTop - 60,
-        behavior: 'smooth',
+        behavior: "smooth",
       });
     }
   });
 });
 
 // Wait for DOM to load before initializing Typed.js and form logic
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener("DOMContentLoaded", () => {
   // Typed.js effect
-  const typedElement = document.querySelector('.typed-text');
+  const typedElement = document.querySelector(".typed-text");
   if (typedElement) {
-    new Typed('.typed-text', {
-      strings: ['Java Backend Developer', 'MERN Stack Developer'],
+    new Typed(".typed-text", {
+      strings: ["Java Backend Developer", "MERN Stack Developer"],
       typeSpeed: 50,
       backSpeed: 30,
       backDelay: 1500,
       smartBackspace: true,
       loop: true,
       showCursor: true,
-      cursorChar: '|'
+      cursorChar: "|",
     });
   }
 
   // Simple form validation
-  const form = document.querySelector('form');
+  const form = document.querySelector("form");
   if (form) {
-    form.addEventListener('submit', e => {
+    form.addEventListener("submit", (e) => {
       const email = form.querySelector('input[type="email"]');
-      const message = form.querySelector('textarea');
-      if (!email.value.includes('@') || message.value.trim() === '') {
+      const message = form.querySelector("textarea");
+      if (!email.value.includes("@") || message.value.trim() === "") {
         e.preventDefault();
-        alert('Please enter a valid email and message.');
+        alert("Please enter a valid email and message.");
       }
     });
   }
 });
 
 AOS.init();
-
 
 const menuBtn = document.getElementById("menu-btn");
 const mobileMenu = document.getElementById("mobile-menu");
