@@ -10,7 +10,7 @@ a {
 }
 .skill-item:hover {
   transform: scale(1.1);
-  color: #fbbf24; /* Hover color (yellow) */
+  color: #fbbf24; /*  Hover color (yellow) */
 }
 .bg-gray-800:hover {
   transform: scale(1.05);
